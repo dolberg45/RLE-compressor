@@ -1,9 +1,6 @@
 # coding=utf-8
 import numpy as np
 import cv2
-# import image_reader
-# import naive_LZ77
-# import LZ77
 
 class Binary_RLE_Compressor(object):
 	""" RLE compressor for binary image"""
@@ -93,52 +90,4 @@ class Binary_RLE_Compressor(object):
 			curr_color = 1 - curr_color
 
 		return origin_image
-
-# for test
-
-# VALUE = 125
-# IMG_NAME = 'test.PNG'
-
-# if __name__ == '__main__':
-# 	test_img = cv2.imread(IMG_NAME,cv2.IMREAD_GRAYSCALE)
-# 	cv2.threshold(test_img,VALUE,255,cv2.THRESH_BINARY,test_img)
-# 	cv2.imshow('origin_image',test_img)
-# 	cv2.waitKey(0)
-
-# 	img_for_compress = np.copy(test_img)
-# 	compressor = Binary_RLE_Compressor()
-# 	pack = compressor.compression(img_for_compress)
-# 	print len(pack) - 2
-# 	unpack = compressor.decompression(pack)
-
-# 	cv2.imshow('compressed_img', unpack)
-# 	cv2.waitKey(0)
-
-# if __name__ == '__main__':
-# 	im_reader = image_reader.image_reader(IMG_NAME)
-# 	test_image = im_reader.read_image()
-
-# 	img_for_compress = np.copy(test_image)
-# 	RLE_compressor = Binary_RLE_Compressor()
-# 	pack = RLE_compressor.compression(img_for_compress)
-# 	print len(pack) - 2
-# 	LZ77_compressor = LZ77.LZ77(50)
-# 	LZ77_pack = LZ77_compressor.compress(pack,verbose=False)
-# 	LZ77_unpack = LZ77_compressor.decompress(fromFile=False,data_flow=LZ77_pack)
-# 	unpack_image = RLE_compressor.decompression(LZ77_unpack)
-# 	cv2.imshow('test',unpack_image)
-# 	cv2.waitKey(0)
-# 	LZ77_compressor = naive_LZ77.naive_LZ77({
-# 	'buffer_size' : 80,	# size of lookahead buffer
-# 	'window_size' : 160,	# size of dictionary
-# 	'auto' : False		# Whether decide the size of buffer and dictionary automatically
-# })
-# 	LZ77_pack = LZ77_compressor.compress_string(pack)
-# 	print len(LZ77_pack) - 2
-# 	print LZ77_pack
-
-
-
-
-
 

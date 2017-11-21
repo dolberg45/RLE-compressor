@@ -16,9 +16,4 @@ class image_reader(object):
 		cv2.threshold(image,self.threshold,255,cv2.THRESH_BINARY,image)
 		return image
 
-# for test
-# if __name__ == '__main__':
-# 	img_reader = image_reader('test.PNG')
-# 	image = img_reader.read_image()
-# 	cv2.imshow('test',image)
-# 	cv2.waitKey(0)
+

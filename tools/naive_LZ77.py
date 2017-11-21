@@ -9,9 +9,7 @@ algorithm_para = {
 	'auto' : True		# Whether decide the size of buffer and dictionary automatically
 }
 
-TEST_STRING = ['1','2','3','1','2','3','1','2','3']
-#TEST_STRING = '123123123123'
-#TEST_STRING = 'this_is_a_test_string'
+
 class naive_LZ77(object):
 	"""a naive implementation of LZ77"""
 	def __init__(self, arg=algorithm_para):

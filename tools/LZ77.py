@@ -156,12 +156,3 @@ class LZ77(object):
 		return output_buffer
 
 
-# # for test
-# if __name__ == '__main__':
-# 	#data = ['1','1','1','2','2','3','3','4','1','1','1','2','2','3','3','4','1','1','1','2','2','3','3','4']
-# 	data = [1,1,1,2,2,3,3,4,1,1,1,2,2,3,3,4,1,1,1,2,2,3,3,4]
-# 	compressor = LZ77()
-# 	pack = compressor.compress(data,verbose=True)
-# 	unpack = compressor.decompress(fromFile=False,data_flow=pack)
-# 	print unpack
-# 	print unpack == data
